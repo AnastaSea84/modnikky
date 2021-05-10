@@ -20,18 +20,20 @@
 .btn {
     display: inline-flex;
     padding: 40px 40px;
+    // height: 100px;
     border: 2px solid $blackColor;
     font-family: $fontRoman;
     font-size: 28px;
     line-height: 28 / 28 * 100%;
-    color: $whiteColor;
+    color: $blackColor;
+    text-transform: uppercase;
     &_black {
         background-color: $blackColor;
         color: $whiteColor;
     }
     @media (min-width: 850px) {
         border: 2px solid $whiteColor;
-        color: $blackColor;
+        color: $whiteColor;
         font-size: 32px;
         line-height: 32 / 32 * 100%;
     }

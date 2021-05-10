@@ -46,6 +46,7 @@ body {
     color: #000;
     font-size: 24px;
     line-height: 24 / 24 * 100%;
+    height: 100%;
     &._lock {
         overflow: hidden;
     }
@@ -54,7 +55,7 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-    width: 100%;
+    // width: 100%;
     min-height: 100%;
     overflow: hidden;
     display: flex;

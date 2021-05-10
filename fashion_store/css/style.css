@@ -127,6 +127,7 @@ body {
   color: #000;
   font-size: 24px;
   line-height: 100%;
+  height: 100%;
 }
 
 body._lock {
@@ -134,7 +135,6 @@ body._lock {
 }
 
 .wrapper {
-  width: 100%;
   min-height: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -161,7 +161,8 @@ body._lock {
   font-family: "HelveticaNeueLTStd-Roman";
   font-size: 28px;
   line-height: 100%;
-  color: #fff;
+  color: #000f08;
+  text-transform: uppercase;
 }
 
 .btn_black {
@@ -994,6 +995,51 @@ body.ie ._ibg img {
 }
 */
 
+.full-screen {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.full-screen__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.full-screen__body {
+  position: relative;
+  z-index: 2;
+  max-width: 50%;
+  margin: 0 0 300px 200px;
+}
+
+.full-screen__title {
+  margin-bottom: 40px;
+}
+
+.full-screen__text {
+  font-size: 32px;
+  line-height: 150%;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin-bottom: 60px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1010,7 +1056,7 @@ body.ie ._ibg img {
 @media (min-width: 850px) {
   .btn {
     border: 2px solid #fff;
-    color: #000f08;
+    color: #fff;
     font-size: 32px;
     line-height: 100%;
   }

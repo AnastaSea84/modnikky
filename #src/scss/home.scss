@@ -1,3 +1,48 @@
 //====================================================================================================
+.main-screen {
+}
+.full-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // align-items: flex-end;
+    &__content {
+    }
+
+    &__image {
+        flex: 1 1 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        // padding: 0px 0 200px 300px;
+        // flex: 0 1 50%;
+        max-width: 50%;
+        margin: 0 0 300px 200px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 32px;
+        line-height: 48 / 32 * 100%;
+        color: $whiteColor;
+        letter-spacing: 0.04em;
+        margin-bottom: 60px;
+    }
+
+    &__button {
+    }
+}
 
 //====================================================================================================
