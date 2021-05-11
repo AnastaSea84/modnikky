@@ -10,7 +10,7 @@
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
-//@import "icons";
+@import "icons";
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -23,8 +23,8 @@ $fontFamily: "HelveticaNeueLTStd-Lt";
 $minWidth: 320px;
 $maxWidth: 2880;
 $maxWidthContainer: 2880;
-// $md1: $maxWidthContainer + 12;
-$md2: 840.98;
+$md1: 991.98;
+$md2: 850.98;
 $md3: 767.98;
 $md4: 479.98;
 $md5: 350.98;
@@ -68,13 +68,22 @@ body {
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 ._container {
     max-width: $maxWidthContainer + px;
-    padding: 0px 188px;
     margin: 0 auto;
-    // @media (max-width: $md1+px) {
-    //     max-width: 970px;
-    // }
+
+    @media (min-width: 1800px) {
+        padding: 0px 188px;
+    }
+    @media (min-width: 1170px) {
+        padding: 0px 88px;
+    }
+    @media (min-width: 850px) {
+        padding: 0px 30px;
+    }
+    @media (max-width: $md1+px) {
+        max-width: 800px;
+    }
     @media (max-width: $md2+px) {
-        max-width: 750px;
+        max-width: 700px;
     }
     @media (max-width: $md3+px) {
         max-width: none;
@@ -101,6 +110,28 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    &__main-screen {
+    }
+    &__photos {
+        @media (max-width: $md2+px) {
+            display: none;
+        }
+    }
+    &__arrivals {
+        padding: 4.2% 0;
+        @media (max-width: $md2+px) {
+            padding: 4% 0 9%;
+        }
+    }
+    &__rock-screen {
+        padding-bottom: 4%;
+    }
+    &__insta-shop {
+        padding: 4.2% 0;
+    }
 }
 //===================================================================================================================================
 

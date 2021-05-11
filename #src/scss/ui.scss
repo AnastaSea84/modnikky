@@ -3,6 +3,14 @@
     font-family: $fontBold;
     font-size: 70px;
     line-height: 70px;
+    @media (min-width: 992px) {
+        @include adaptiv-font(70, 42, 40);
+    }
+    @media (max-width: 992px) {
+        font-size: 42px;
+        @include adaptiv-font(42, 30, 30);
+    }
+
     color: $blackColor;
     &_white {
         color: $whiteColor;
@@ -14,6 +22,14 @@
     line-height: 76 / 76 * 100%;
     text-transform: uppercase;
     color: $whiteColor;
+    @media (min-width: 850px) {
+        @include adaptiv-font(76, 42, 24);
+    }
+    @media (max-width: $md2+px) {
+        font-size: 76px;
+        color: $blackColor;
+        text-align: center;
+    }
     &_black {
         color: $blackColor;
     }
@@ -21,10 +37,14 @@
 
 .label {
     font-family: $fontRoman;
-    font-size: 32px;
-    line-height: 48 / 32 * 100%;
+    font-size: 24px;
+    line-height: 48 / 24 * 100%;
     letter-spacing: 0.04em;
     color: $blackColor;
+    text-transform: uppercase;
+    @media (min-width: 992px) {
+        @include adaptiv-font(32, 15, 15);
+    }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 

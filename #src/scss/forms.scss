@@ -19,8 +19,9 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn {
     display: inline-flex;
-    padding: 40px 40px;
-    // height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
     border: 2px solid $blackColor;
     font-family: $fontRoman;
     font-size: 28px;
@@ -31,11 +32,24 @@
         background-color: $blackColor;
         color: $whiteColor;
     }
+    @media (min-width: 1440px) {
+        max-height: 100px;
+        width: 480px;
+    }
     @media (min-width: 850px) {
+        max-height: 80px;
+        width: 355px;
         border: 2px solid $whiteColor;
         color: $whiteColor;
         font-size: 32px;
         line-height: 32 / 32 * 100%;
+        @include adaptiv-font(32, 24, 24);
+    }
+    @media (max-width: $md2+px) {
+        width: 400px;
+        height: 80px;
+        border: 2px solid $blackColor;
+        color: $blackColor;
     }
     @media (min-width: 992px) {
         &:hover {
@@ -152,7 +166,7 @@ textarea {
     border-radius: 0 !important;
     width: 100%;
     display: block;
-    padding: 0px 20px;
+    // padding: 0px 20px;
     &._focus {
     }
     &._error {
