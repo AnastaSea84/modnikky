@@ -27,7 +27,7 @@ $md1: 991.98;
 $md2: 850.98;
 $md3: 767.98;
 $md4: 479.98;
-$md5: 350.98;
+$md5: 375.98;
 
 // Цвета -------------------------------------------------------------
 $whiteColor: #fff;
@@ -45,8 +45,16 @@ $fontBold: "HelveticaNeueLTStd-BdEx";
 body {
     color: #000;
     font-size: 24px;
-    line-height: 24 / 24 * 100%;
+    // line-height: 24 / 24 * 100%;
+    line-height: 110%;
     height: 100%;
+    @media (max-width: $md4+px) {
+        font-size: 18px;
+    }
+    @media (max-width: $md5+px) {
+        font-size: 15px;
+        line-height: 120%;
+    }
     &._lock {
         overflow: hidden;
     }
@@ -55,7 +63,6 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-    // width: 100%;
     min-height: 100%;
     overflow: hidden;
     display: flex;
@@ -87,7 +94,7 @@ body {
     }
     @media (max-width: $md3+px) {
         max-width: none;
-        padding: 0 10px;
+        padding: 0 4%;
     }
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -114,6 +121,11 @@ body {
     flex-direction: column;
 
     &__main-screen {
+    }
+    &__vintage-screen {
+        @media (max-width: $md2+px) {
+            margin-top: 5%;
+        }
     }
     &__photos {
         @media (max-width: $md2+px) {

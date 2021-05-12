@@ -12,17 +12,33 @@
         @media (max-width: $md1+px) {
             margin-bottom: 10%;
         }
+        @media (max-width: $md4+px) {
+            margin-bottom: 13%;
+            border-top: 1px solid rgba(0, 0, 0, 0.431);
+            padding-top: 20px;
+        }
     }
-
+    &__sub-title {
+        font-family: $fontRoman;
+        margin-bottom: 28px / 32px * 1em;
+        font-size: 32px;
+        line-height: 110%;
+        @media (max-width: $md4+px) {
+            font-size: 28px;
+        }
+    }
     &__label {
         margin-bottom: 60px / 32px * 1em;
+        @media (max-width: $md4+px) {
+            margin-bottom: 0;
+        }
+
         @media (max-width: $md1+px) {
             &._spoller {
                 display: flex;
                 align-items: center;
                 position: relative;
                 padding-left: 26px;
-
                 cursor: pointer;
                 &::before {
                     content: "";
@@ -44,19 +60,17 @@
                 }
             }
         }
-        &_top {
-            margin-bottom: 24px;
-            &::before,
-            &::after {
-                content: "";
-                display: none;
-            }
-        }
     }
 
     &__text {
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
         margin-bottom: 3.2%;
+        @media (max-width: $md1+px) {
+            margin-bottom: 8%;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 17px;
+        }
     }
 
     &__body {
@@ -89,6 +103,9 @@
                 margin-bottom: 0;
             }
         }
+        @media (max-width: $md4+px) {
+            flex: 1 1 40px;
+        }
         &_contact {
             .footer__link {
                 text-transform: none;
@@ -106,6 +123,9 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        @media (max-width: $md4+px) {
+            padding-top: 5%;
         }
     }
 
@@ -140,6 +160,9 @@
         @media (max-width: $md1+px) {
             width: 100%;
         }
+        @media (max-width: $md2+px) {
+            width: 90%;
+        }
     }
 
     &__input {
@@ -147,6 +170,12 @@
         line-height: 48 / 32 * 100%;
         letter-spacing: 0.04em;
         color: #8c8c8c;
+        @media (max-width: $md2+px) {
+            font-size: 25px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 17px;
+        }
     }
 
     &__button {
@@ -156,6 +185,12 @@
         line-height: 48 / 32 * 100%;
         letter-spacing: 0.04em;
         color: $blackColor;
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 20px;
+        }
     }
 }
 //====================================================================================================

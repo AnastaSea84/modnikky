@@ -51,6 +51,11 @@
         border: 2px solid $blackColor;
         color: $blackColor;
     }
+    @media (max-width: $md4+px) {
+        width: 85%;
+        height: 60px;
+        font-size: 22px;
+    }
     @media (min-width: 992px) {
         &:hover {
         }

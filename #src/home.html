@@ -8,9 +8,17 @@
     <div class="wrapper">
         @@include('_header.html',{})
         <main class="page">
-            <section class="page__main-screen main-screen full-screen">
-                <div class="main-screen__image full-screen__image _ibg">
-                    <img src="img/main-screen/main_screen_pic.jpg" alt="Hands with jewelry rings">
+            <section class="page__main-screen main-screen">
+                <div class="main-screen__slider _swiper">
+                    <div class="main-screen__image _ibg">
+                        <img src="img/main-screen/main_screen_pic.jpg" alt="Hands with jewelry rings">
+                    </div>
+                    <div class="main-screen__image _ibg">
+                        <img src="img/main-screen/main_screen_pic-2.jpg" alt="Hands with jewelry rings">
+                    </div>
+                    <div class="main-screen__image _ibg">
+                        <img src="img/main-screen/main_screen_pic-3.jpg" alt="Hands with jewelry rings">
+                    </div>
                 </div>
                 <div class="main-screen__body full-screen__body full-screen__body_main">
                     <h2 class="main-screen__title full-screen__title title">NEW COLLECTION</h2>
@@ -18,7 +26,7 @@
                     <a href="#" class="main-screen__button full-screen__button btn">SHOP NEW ARRIVALS</a>
                 </div>
             </section>
-            <section class="vintage-screen full-screen">
+            <section class="page__vintage-screen vintage-screen full-screen">
                 <div class="full-screen__image _ibg">
                     <img src="img/vintage/vintage_screen.jpg" alt="Vintage clothes">
                 </div>
@@ -87,7 +95,7 @@
                 <div class="shop-insta__container _container">
                     <div class="shop-insta__header">
                         <h3 class="shop-insta__label label">SHOP INSTAGRAM</h3>
-                        <a href="" class="shop-insta__link label">SHOP</a>
+                        <a href="#" class="shop-insta__link label" data-da=".shop-insta__footer,992">SHOP</a>
                     </div>
                     <div class="shop-insta__gallery">
                         <div class="shop-insta__column shop-insta__column_left">

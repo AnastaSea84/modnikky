@@ -7,9 +7,24 @@
         }
 
         &__body {
+            width: 100%;
             text-align: center;
             padding: 0px 6%;
             transform: translateY(-42px);
+            &_main {
+                align-self: flex-end;
+                transform: translateY(-42px);
+            }
+            @media (max-width: $md3+px) {
+                padding: 0px 3%;
+                transform: translateY(-30px);
+            }
+            @media (max-width: $md4+px) {
+                transform: translateY(-24px);
+            }
+            @media (max-width: $md5+px) {
+                transform: translateY(-21px);
+            }
         }
 
         &__title {
@@ -26,6 +41,44 @@
     }
 }
 //========================================================================================================================================================
+.main-screen {
+    flex: 1 0 100vh;
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    &__slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+}
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+    // img {
+    //     animation: imageEnter 3s ease-out both;
+    //     @keyframes imageEnter {
+    //         0% {
+    //             transform: scale(1) translate(0, 0);
+    //             transform-origin: 16% 16%;
+    //         }
+    //         100% {
+    //             transform: scale(1.25) translate(-20px, -15px);
+    //             transform-origin: top left;
+    //         }
+    //     }
+    // }
+}
 
 .full-screen {
     @media (min-width: $md2+px) {
@@ -144,7 +197,8 @@
 
     &__row {
         display: flex;
-        padding-top: 60px;
+        // padding-top: 60px;
+        padding-top: 2.4%;
         @media (max-width: $md2+px) {
             display: block;
         }
@@ -177,6 +231,9 @@
     &__label {
         margin-right: 3.76em;
         display: inline-block;
+        @media (max-width: $md1+px) {
+            display: block;
+        }
     }
 
     &__link {
@@ -194,7 +251,7 @@
 
     &__gallery {
         display: flex;
-        padding: 60px 0 60px;
+        padding: 2.4% 0;
         @media (max-width: $md2+px) {
             display: block;
         }
@@ -233,6 +290,9 @@
     }
 
     &__footer {
+        @media (max-width: $md2+px) {
+            padding: 0 2%;
+        }
     }
 
     &__hashtag {

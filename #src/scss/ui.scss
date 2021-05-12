@@ -30,6 +30,16 @@
         color: $blackColor;
         text-align: center;
     }
+    @media (max-width: 660px) {
+        font-size: 60px;
+    }
+    @media (max-width: $md4+px) {
+        font-size: 44px;
+    }
+    @media (max-width: $md5+px) {
+        font-size: 37px;
+    }
+
     &_black {
         color: $blackColor;
     }
@@ -44,6 +54,15 @@
     text-transform: uppercase;
     @media (min-width: 992px) {
         @include adaptiv-font(32, 15, 15);
+    }
+    @media (max-width: $md1+px) {
+        font-size: 24px;
+    }
+    // @media (max-width: $md3+px) {
+    //     font-size: 28px;
+    // }
+    @media (max-width: $md4+px) {
+        font-size: 22px;
     }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
@@ -236,6 +255,8 @@ body.ie {
 //====================================================================================================
 ._swiper {
     overflow: hidden;
+    width: 100%;
+    height: 100%;
     //.swiper-wrapper
     .swiper-wrapper {
         width: 100%;
@@ -269,6 +290,19 @@ body.ie {
 }
 .swiper-button-lock {
     display: none !important;
+}
+.main-screen__dottes {
+    position: absolute;
+    .swiper-pagination-bullet {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: rgb(194, 45, 45);
+    }
 }
 //====================================================================================================
 ._tabs {
