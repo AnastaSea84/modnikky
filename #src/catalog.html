@@ -1,13 +1,394 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Главная"
+"title":"Catalog"
 })
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper_pages">
         @@include('_header.html',{})
-        <main class="page">
+        <main class="catalog">
+            <div class="catalog__container">
+                <aside class="catalog__aside aside-catalog">
+                    <!-- <div class="aside-catalog__box"> -->
+                    <div class="aside-catalog__categories categories">
+                        <h5 class="categories__label label">CATEGORIES</h5>
+                        <ul class="categories__list">
+                            <li><a href="#no-scroll" class="categories__link">TOPS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">TEES AND TANKS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">SHIRTS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">DRESSES</a></li>
+                            <li><a href="#no-scroll" class="categories__link">JACKETS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">KNITWEAR</a></li>
+                            <li><a href="#no-scroll" class="categories__link">JUMPSUITS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">BOTTOMS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">INTIMATES</a></li>
+                            <li><a href="#no-scroll" class="categories__link">SHORTS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">JEANS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">SKIRTS</a></li>
+                            <li><a href="#no-scroll" class="categories__link">SALE</a></li>
+                            <li><a href="#no-scroll" class="categories__link">SHOP ALL</a></li>
+                        </ul>
+                    </div>
+                    <div class="aside-catalog__filters filters-catalog ">
+                        <h6 class="filters-catalog__label">FILTERS</h6>
+                        <ul class="filters-catalog__list">
+                            <li class="filters-catalog__filter">SIZE</li>
+                            <li class="filters-catalog__filter _open">PRICE</li>
+                            <li class="filters-catalog__filter _open">COLOR</li>
+                            <li class="filters-catalog__filter _open">FABRIC</li>
+                        </ul>
+                        <div class="filters-catalog__select">
+                            <span class="filters-catalog__sort">SORT:</span>
+                            <select name="form[]" class="filters-catalog__form form">
+                                <option value="1" selected="selected">NEWEST</option>
+                                <option value="2">MOST LIKED</option>
+                                <option value="3">LOW PRICED</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </aside>
+                <div class="catalog__body _gallery">
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-1.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-1.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">BLACK SPORT FOX BRALETTE</h6>
+                                <span class="item-catalog__price">USD $99.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-2.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-2.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">PARADISE UTILITY JUMPSUIT</h6>
+                                <span class="item-catalog__price">USD $189.00</span>
+                                <span class="item-catalog__note">SOLD OUT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-3.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-3.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">KHAKI LEGEND HIGH WAIST MOM JEANS</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-6.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-6.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GUNMETAL MIDNIGHT FAUX SILK CISCO DRESS</h6>
+                                <span class="item-catalog__price">USD $159.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-8.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-8.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">ORGANIC COTTON AND HEMPDRESS</h6>
+                                <span class="item-catalog__price">USD $159.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-4.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-4.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">BUFFALO MODAL SPLIT TOP</h6>
+                                <span class="item-catalog__price">USD $89.00</span>
+                                <span class="item-catalog__note">sold out</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-7.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-7.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">NUDE REBEL KNIT</h6>
+                                <span class="item-catalog__price">USD $129.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-5.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-5.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GREY SOCIETY FREEBIRDS LOW WAIST RIGID SKINNY JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-9.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-9.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">SUNBLEACH BLUE SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-10.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-10.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">CHALK SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $189.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-11.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-11.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">BLACK SPORT FOX BRALETTE</h6>
+                                <span class="item-catalog__price">USD $99.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-12.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-12.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">PARADISE UTILITY JUMPSUIT</h6>
+                                <span class="item-catalog__price">USD $189.00</span>
+                                <span class="item-catalog__note">SOLD OUT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-13.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-13.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">KHAKI LEGEND HIGH WAIST MOM JEANS</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-14.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-14.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GUNMETAL MIDNIGHT FAUX SILK CISCO DRESS</h6>
+                                <span class="item-catalog__price">USD $159.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-15.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-15.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">ORGANIC COTTON AND HEMPDRESS</h6>
+                                <span class="item-catalog__price">USD $159.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-16.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-16.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">BUFFALO MODAL SPLIT TOP</h6>
+                                <span class="item-catalog__price">USD $89.00</span>
+                                <span class="item-catalog__note">sold out</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-17.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-17.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">NUDE REBEL KNIT</h6>
+                                <span class="item-catalog__price">USD $129.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-18.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-18.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GREY SOCIETY FREEBIRDS LOW WAIST RIGID SKINNY JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-19.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-19.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">SUNBLEACH BLUE SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-20.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-20.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">CHALK SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $189.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-21.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-21.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GREY SOCIETY FREEBIRDS LOW WAIST RIGID SKINNY JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-22.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-22.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">SUNBLEACH BLUE SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-23.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-23.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">CHALK SAINTS BOYFRIEND JEAN</h6>
+                                <span class="item-catalog__price">USD $189.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item item-catalog">
+                        <a href="img/catalog/catalog-item-24.jpg" class="item-catalog__image _ibg">
+                            <img src="img/catalog/catalog-item-24.jpg" alt="">
+                            <span class="item-catalog__like item-catalog__like_mobile _icon-wishlist-icon _heartbeat"></span>
+                        </a>
+                        <div class="item-catalog__body">
+                            <span class="item-catalog__like _icon-wishlist-icon _heartbeat"></span>
+                            <div class="item-catalog__description">
+                                <h6 class="item-catalog__title">GREY SOCIETY FREEBIRDS LOW WAIST RIGID SKINNY JEAN</h6>
+                                <span class="item-catalog__price">USD $150.00</span>
+                                <span class="item-catalog__note"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </main>
         @@include('_footer.html',{})

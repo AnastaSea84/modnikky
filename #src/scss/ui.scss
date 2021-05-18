@@ -11,11 +11,14 @@
         @include adaptiv-font(42, 30, 30);
     }
 
-    color: $blackColor;
     &_white {
         color: $whiteColor;
     }
 }
+.wrapper_pages .logo {
+    color: $blackColor;
+}
+
 .title {
     font-family: $fontMedium;
     font-size: 76px;
@@ -65,8 +68,114 @@
         font-size: 22px;
     }
 }
+//========================================================================================================================================================
+//HOVERS -------------
+._heartbeat {
+    transition: all 0.3s ease 0s;
+    &:hover::before {
+        display: inline-block;
+        animation: heartbeat 2s ease-in-out backwards;
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+                transform-origin: center center;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                transform: scale(0.91);
+                animation-timing-function: ease-in;
+            }
+            17% {
+                transform: scale(0.98);
+                animation-timing-function: ease-out;
+            }
+            33% {
+                transform: scale(0.87);
+                animation-timing-function: ease-in;
+            }
+            45% {
+                transform: scale(1);
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+    &:active {
+        transform: scale(0.7);
+    }
+}
+._search {
+    transition: all 0.3s ease 0s;
+    &:hover::before {
+        display: inline-block;
+        animation: jello 0.9s both;
+        @keyframes jello {
+            0% {
+                transform: scale3d(1, 1, 1);
+            }
+            30% {
+                transform: scale3d(1.25, 0.75, 1);
+            }
+            40% {
+                transform: scale3d(0.75, 1.25, 1);
+            }
+            50% {
+                transform: scale3d(1.15, 0.85, 1);
+            }
+            65% {
+                transform: scale3d(0.95, 1.05, 1);
+            }
+            75% {
+                transform: scale3d(1.05, 0.95, 1);
+            }
+            100% {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
+    &:active {
+        transform: scale(0.7);
+    }
+}
+._shop-bag {
+    transition: all 0.3s ease 0s;
+    &:hover::before {
+        animation: blink 0.9s both;
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    &:active {
+        transform: scale(0.7);
+    }
+}
+//========================================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
-
+._open {
+    display: flex;
+    cursor: pointer;
+    &::before {
+        content: "\e90c";
+        font-family: "icons";
+        font-size: 17px;
+        margin-right: 13px;
+        opacity: 0.9;
+        transform: rotate(0deg);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    }
+}
+._spoller._open._active {
+    &::before {
+        transform: rotate(135deg);
+    }
+}
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
 .row:after {
     display: block;

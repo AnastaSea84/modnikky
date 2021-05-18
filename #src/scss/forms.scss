@@ -28,9 +28,33 @@
     line-height: 28 / 28 * 100%;
     color: $blackColor;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s ease-out;
+        opacity: 0;
+        transform: translate(0, -105%);
+        background-color: rgba(0, 0, 0, 0.055);
+    }
+    &:hover::before {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    &:active::before {
+        transform: translate(0, 105%);
+    }
     &_black {
         background-color: $blackColor;
         color: $whiteColor;
+        border: none;
     }
     @media (min-width: 1440px) {
         max-height: 100px;
@@ -44,6 +68,10 @@
         font-size: 32px;
         line-height: 32 / 32 * 100%;
         @include adaptiv-font(32, 24, 24);
+        &::before {
+            content: "";
+            background-color: rgba(255, 255, 255, 0.25);
+        }
     }
     @media (max-width: $md2+px) {
         width: 400px;
@@ -66,6 +94,28 @@
 }
 //</BUTTONS>====================================================================================================
 
+.btn-grad {
+    background-image: linear-gradient(to right, #ece9e6 0%, #ffffff 51%, #ece9e6 100%);
+}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
 //<SELECT (sel+tab)>====================================================================================================
 .select {
     position: relative;
@@ -76,10 +126,8 @@
     // .select__title
     &__title {
         color: #000;
-        border: 1px solid #d9d9d9;
         background-color: #fff;
         cursor: pointer;
-        border-radius: 4px;
         @media (max-width: $md2+px) {
             font-size: 18px;
         }
@@ -87,26 +135,30 @@
     // .select__value
     &__value {
         display: flex;
-        font-size: 14px;
+        font-size: 24px;
+        @include adaptiv-font(24, 14, 24);
         height: 30px;
         padding: 0px 15px;
         align-items: center;
         justify-content: space-between;
         flex-direction: row-reverse;
+        @media (max-width: $md1+px) {
+            padding: 0 0 0 8px;
+        }
         span {
-            height: 1em;
+            // height: 1em;
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
         }
         &:before {
-            content: "";
+            content: "\e90f";
+            font-family: "icons";
             display: inline-block;
             transition: all 0.3s ease 0s;
-            width: 11px;
-            height: 7px;
-            background: url("../img/icons/select.svg") center / 100% no-repeat;
+            transform: rotate(90deg);
+            margin-left: 10px;
         }
     }
     &__input {
@@ -120,17 +172,16 @@
         display: none;
         position: absolute;
         top: 29px;
-        border-radius: 0 0 4px 4px;
-        min-width: 100%;
-        left: 0;
+        min-width: 150%;
+        right: 0;
         background-color: #fff;
         border-top: 0;
-        border: 1px solid #d9d9d9;
         border-top: 0;
         font-size: 14px;
         padding: 10px 0px 5px 0px;
-        @media (max-width: $md2+px) {
-            font-size: 18px;
+        text-align: right;
+        @media (max-width: $md1+px) {
+            font-size: 12px;
         }
     }
     // .select__option
@@ -143,12 +194,15 @@
                 background: #d9d9d9;
             }
         }
+        @media (max-width: $md1+px) {
+            padding: 5px 0;
+        }
     }
     &._active {
         z-index: 5;
         .select__value {
             &:before {
-                transform: rotate(-180deg);
+                transform: rotate(-90deg);
             }
         }
         .select__options {
@@ -175,7 +229,11 @@ textarea {
     &._focus {
     }
     &._error {
+        border-bottom: 1px solid red;
     }
+    // &.checkbox-line__input._error {
+    //     border: 1px solid red;
+    // }
 }
 textarea.input {
     resize: none;
@@ -185,50 +243,6 @@ textarea.input {
 
 //<CHECK (chk+tab)>====================================================================================================
 .checkbox {
-    position: relative;
-    // .checkbox__input
-    &__input {
-        position: absolute;
-        width: 0;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        &:checked + .checkbox__text:before {
-            background: #fff url("../img/icons/check.svg") center no-repeat;
-        }
-    }
-    // .checkbox__text
-    &__text {
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-        font-size: 16px;
-        color: #ffffff;
-        letter-spacing: -0.3px;
-        line-height: calc(20 / 16);
-        cursor: pointer;
-        &:before {
-            content: "";
-            align-self: flex-start;
-            margin: 0px 14px 0px 0px;
-            flex: 0 0 20px;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 18px;
-            background: #fff;
-            border: 1px solid #a7a9ac;
-        }
-    }
-    a {
-        color: #fff;
-        text-decoration: underline;
-        @media (min-width: 992px) {
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
     &._error {
         .checkbox__text {
             &:before {

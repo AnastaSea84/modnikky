@@ -1,5 +1,6 @@
-// SPOLLERS
+// SPOLLERS ---------------------------------
 const spollers = document.querySelectorAll('._spollers');
+
 if (spollers.length > 0) {
     function initSpollers() {
         const windowWidth = window.innerWidth;
@@ -48,3 +49,47 @@ if (spollers.length > 0) {
     });
     initSpollers();
 }
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+//  Search -----------------------------
+const searchHeaderLink = document.querySelector('.actions-header__link_search');
+const searchHeaderIcon = document.querySelector('._action-search');
+const searchHeaderForm = document.querySelector('.form-header');
+
+
+searchHeaderLink.addEventListener("click", function (e) {
+    searchHeaderForm.classList.toggle('_active');
+    // searchHeaderIcon.classList.toggle('_icon-search');
+    // searchHeaderIcon.classList.toggle('_close');
+});
+searchHeaderIcon.addEventListener("click", function (e) {
+    searchHeaderForm.classList.toggle('_active');
+    // searchHeaderIcon.classList.toggle('_icon-search');
+    // searchHeaderIcon.classList.toggle('_close');
+});
+
+document.addEventListener("keydown", function (e) {
+    if (e.code === 'Escape') {
+        searchHeaderForm.classList.remove('_active');
+        // searchHeaderIcon.classList.remove('_close');
+        // searchHeaderIcon.classList.toggle('_icon-search');
+    }
+});
+
+document.addEventListener("click", function (e) {
+    if (!e.target.closest('.form-header') && !e.target.classList.contains('actions-header__link_search') && !e.target.classList.contains('_action-search')) {
+        searchHeaderForm.classList.remove('_active');
+        // searchHeaderIcon.classList.remove('_close');
+        // searchHeaderIcon.classList.add('_icon-search');
+    }
+});
+
+// document.addEventListener("click", function (e) {
+//     if (!e.target.closest('.form-header') && !e.target.classList.contains('_action-search')) {
+//         searchHeaderForm.classList.remove('_active');
+//         // searchHeaderIcon.classList.remove('_close');
+//         // searchHeaderIcon.classList.add('_icon-search');
+//     }
+// });
+//========================================================================================================================================================

@@ -1,5 +1,10 @@
 <header class="header">
-    <!-- <div class="header__row"> -->
+    <form class="header__form form-header" action="#">
+        <div class="form-header__line">
+            <input type="text" name="" class="form-header__input">
+            <button class="form-header__button _icon-search-icon" type="submit"></button>
+        </div>
+    </form>
     <div class="header__menu menu">
         <div class="menu__icon icon-menu">
             <span></span>
@@ -8,27 +13,25 @@
         </div>
         <nav class="menu__body">
             <ul class="menu__list">
-                <li><a href="#" class="menu__link">NEW ARRIVALS</a></li>
-                <li><a href="#" class="menu__link">SHOP</a></li>
-                <li><a href="#" class="menu__link">COLLECTIONS</a></li>
-                <li><a href="#" class="menu__link menu__link_mobile">SIGN IN</a></li>
-
+                <li><a href="#page__arrivals" class="menu__link _goto-block">NEW ARRIVALS</a></li>
+                <li><a href="#" class="menu__link _goto">SHOP</a></li>
+                <li><a href="#page__rock-screen" class="menu__link _goto-block">COLLECTIONS</a></li>
             </ul>
         </nav>
-        <h1 class="header__logo"><a class="logo logo_white" href="#">MODNIKKY</a></h1>
+        <h1 class="header__logo"><a class="logo logo_white _goto-block" href="#page__main-screen">MODNIKKY</a></h1>
         <div class="header__actions actions-header">
             <ul class="actions-header__list actions-header_pc">
-                <li><a class="actions-header__link actions-header__link_search" href="#">SEARCH</a></li>
-                <li><a class="actions-header__link" href="#">SIGN IN</a></li>
+                <li><a class="actions-header__link actions-header__link_search _search" href="#no-scroll">SEARCH</a></li>
+                <li><a class="actions-header__link _popup-link" href="#sign-in" data-da=".menu__list,992,4">SIGN IN</a></li>
                 <li><a class="actions-header__link" href="#">BAG (2)</a></li>
-                <li><a class="actions-header__link _icon-wishlist-icon" href="#"></a></li>
+                <li><a class="actions-header__link _icon-wishlist-icon _heartbeat" href="#"></a></li>
             </ul>
             <ul class="actions-header__list actions-header_mobile">
-                <li><a class="actions-header__link _icon-search-icon" href="#"></a></li>
-                <li><a class="actions-header__link _icon-shopping-cart-icon" href="#"><span></span></a></li>
-                <li><a class="actions-header__link _icon-wishlist-icon" href="#"></a></li>
+                <li><a class="actions-header__link actions-header__link_filter" href="#no-scroll"></a></li>
+                <li><a class="actions-header__link _icon-search-icon _action-search _search" href="#no-scroll"></a></li>
+                <li><a class="actions-header__link _icon-shopping-cart-icon _shop-bag" href="#"><span></span></a></li>
+                <li><a class="actions-header__link _icon-wishlist-icon _heartbeat" href="#"></a></li>
             </ul>
         </div>
     </div>
-    <!-- </div> -->
 </header>

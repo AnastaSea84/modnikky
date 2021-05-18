@@ -13,30 +13,41 @@
             transform: translateY(-42px);
             &_main {
                 align-self: flex-end;
-                transform: translateY(-42px);
+                transform: translateY(-80px);
             }
+
             @media (max-width: $md3+px) {
                 padding: 0px 3%;
                 transform: translateY(-30px);
+                &_main {
+                    transform: translateY(-80px);
+                }
             }
             @media (max-width: $md4+px) {
                 transform: translateY(-24px);
+                &_main {
+                    transform: translateY(-80px);
+                }
             }
             @media (max-width: $md5+px) {
                 transform: translateY(-21px);
+                &_main {
+                    transform: translateY(-80px);
+                }
             }
         }
 
         &__title {
             padding: 0px 2%;
             margin-bottom: 40px / 76px * 1em;
+            text-shadow: 1px -1px 1px #ffffff;
+            &.main-screen__title {
+                text-shadow: none;
+            }
         }
 
         &__text {
             margin-bottom: 42px / 24px * 1em;
-        }
-
-        &__button {
         }
     }
 }
@@ -60,25 +71,6 @@
         height: 100%;
     }
 }
-.swiper-container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-    // img {
-    //     animation: imageEnter 3s ease-out both;
-    //     @keyframes imageEnter {
-    //         0% {
-    //             transform: scale(1) translate(0, 0);
-    //             transform-origin: 16% 16%;
-    //         }
-    //         100% {
-    //             transform: scale(1.25) translate(-20px, -15px);
-    //             transform-origin: top left;
-    //         }
-    //     }
-    // }
-}
 
 .full-screen {
     @media (min-width: $md2+px) {
@@ -93,12 +85,6 @@
             top: 0;
             left: 0;
             overflow: hidden;
-            // @media (max-width: $md2+px) {
-            //     position: static;
-            //     height: auto;
-            //     width: 100%;
-            //     padding-bottom: 104.4%;
-            // }
         }
 
         &__body {
@@ -130,21 +116,10 @@
                     flex: 0 1 50%;
                 }
             }
-            // @media (max-width: $md2+px) {
-            //     display: block;
-            //     position: static;
-            //     text-align: center;
-            //     padding: 0px 6%;
-            //     transform: translateY(-42px);
-            // }
         }
 
         &__title {
             margin-bottom: 40px;
-            // @media (max-width: $md2+px) {
-            //     padding: 0px 2%;
-            //     margin-bottom: 40px / 76px * 1em;
-            // }
         }
 
         &__text {
@@ -156,12 +131,6 @@
             @media (min-width: $md2+px) {
                 @include adaptiv-font(32, 20, 20);
             }
-            // @media (max-width: $md2+px) {
-            //     margin-bottom: 42px / 24px * 1em;
-            // }
-        }
-
-        &__button {
         }
     }
 }
@@ -197,7 +166,6 @@
 
     &__row {
         display: flex;
-        // padding-top: 60px;
         padding-top: 2.4%;
         @media (max-width: $md2+px) {
             display: block;
@@ -239,13 +207,14 @@
     &__link {
         display: inline-flex;
         justify-content: center;
-        align-items: center;
         &::after {
-            content: "";
-            background: url("../img/icons/shevron.svg") 0 0 no-repeat;
-            width: 14px;
-            height: 24px;
-            margin-left: 13px;
+            content: "\e90f";
+            font-family: "icons";
+            margin-left: 10px;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover::after {
+            transform: translateX(8px);
         }
     }
 

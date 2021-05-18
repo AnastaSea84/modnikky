@@ -1,79 +1,252 @@
 //====================================================================================================
 .popup {
-	-webkit-overflow-scrolling: touch;
-	z-index: 100;
-	padding: 30px 10px;
-	position: fixed;
-	top: 0px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	&::before {
-		content: "";
-		background-color: rgba(0, 0, 0, 0.9);
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		transition: opacity 0.8s ease 0s;
-	}
-	&.show {
-		visibility: visible;
-		overflow: auto;
-		&::before {
-			opacity: 1;
-		}
-		.popup__body {
-			transform: scale(1);
-		}
-	}
-	&._active {
-		overflow: auto;
-		visibility: visible;
-		&::before {
-			opacity: 1;
-		}
-		.popup__body {
-			transition: all 0.3s ease 0.2s;
-			transform: scale(1);
-		}
-	}
-	// .popup__content
-	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100%;
-		flex: 1 1 auto;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	// .popup__body
-	&__body {
-		transform: scale(0);
-		transition: all 0.3s ease 0s;
-		background-color: #fff;
-		padding: 50px;
-		width: 100%;
-		max-width: 800px;
-	}
-	// .popup__close
-	&__close {
-		width: 15px;
-		height: 15px;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		cursor: pointer;
-		z-index: 30;
-		background: url("../img/icons/close.svg") 0 0 no-repeat;
-	}
+    -webkit-overflow-scrolling: touch;
+    z-index: 100;
+    padding: 30px 10px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: visibility 0.8s ease 0s;
+    visibility: hidden;
+    &::before {
+        content: "";
+        background-color: rgba(32, 32, 32, 0.749);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.8s ease 0s;
+    }
+    &.show {
+        visibility: visible;
+        overflow: auto;
+        &::before {
+            opacity: 1;
+        }
+        .popup__body {
+            transform: scale(1);
+        }
+    }
+    &._active {
+        overflow: auto;
+        visibility: visible;
+        &::before {
+            opacity: 1;
+        }
+        .popup__body {
+            transition: all 0.3s ease 0.2s;
+            transform: scale(1);
+        }
+    }
+    // .popup__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        flex: 1 1 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blackColor;
+    }
+    // .popup__body
+    &__body {
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+        padding: 80px;
+        // width: 100%;
+        max-width: 996px;
+        color: $blackColor;
+        @media (max-width: 1930px) {
+            padding: 50px;
+            width: 50%;
+            @media (max-width: 1440px) {
+                width: 80%;
+            }
+            @media (max-width: $md3+px) {
+                width: 95%;
+                padding: 36px;
+            }
+            @media (max-width: $md4+px) {
+                padding: 20px;
+            }
+        }
+    }
+    // .popup__close
+    &__close {
+        &::before {
+            content: "\e90d";
+            font-family: "icons";
+            width: 15px;
+            height: 15px;
+        }
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 30;
+    }
 }
 //====================================================================================================
+.sign-popup {
+    &__form {
+    }
+
+    &__title {
+        font-family: $fontRoman;
+        font-size: 32px;
+        line-height: 48 / 32 * 100%;
+        letter-spacing: 0.04em;
+        // margin-bottom: 100px / 32px * 1em;
+        margin-bottom: 5%;
+        @media (max-width: $md2+px) {
+            font-size: 22px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 46px;
+        border-bottom: 1px solid #d8d8d8;
+        font-size: 24px;
+        @include adaptiv-font(24, 14, 24);
+        line-height: 24 / 24 * 100%;
+        color: #8c8c8c;
+        margin-bottom: 60px /24px * 1em;
+        @media (max-width: 2200px) {
+            height: 36px;
+        }
+        @media (max-width: $md1+px) {
+            margin-bottom: 3%;
+            &:last-child {
+                margin-bottom: 4%;
+            }
+        }
+    }
+
+    &__checkbox-line {
+        margin-bottom: 40px / 32px * 1em;
+    }
+
+    &__terms {
+        display: inline-block;
+        font-size: 24px;
+        line-height: 36 / 24 * 100%;
+        margin-bottom: 60px / 24px * 1em;
+        color: #8c8c8c;
+        @include adaptiv-font(24, 14, 24);
+        @media (max-width: 1930px) {
+            margin-bottom: 6%;
+        }
+    }
+
+    &__links {
+        color: $blackColor;
+        text-transform: capitalize;
+        border-bottom: 1px solid $blackColor;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            border-bottom: transparent;
+        }
+    }
+
+    &__button {
+        display: flex;
+        margin: 0 auto 60px / 32px * 1em;
+        @media (max-width: 1930px) {
+            margin: 0 auto 3%;
+        }
+        &.btn {
+            width: 60%;
+            color: $whiteColor;
+            @media (max-width: $md2+px) {
+                font-size: 22px;
+            }
+            @media (max-width: $md4+px) {
+                width: 90%;
+                font-size: 18px;
+                padding: 13px;
+                height: 50px;
+            }
+        }
+    }
+
+    &__account-link {
+        color: $blackColor;
+        font-size: 24px;
+        line-height: 24 / 24 * 100%;
+        @include adaptiv-font(24, 14, 24);
+        text-transform: uppercase;
+        border-bottom: 1px solid $blackColor;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+.checkbox-line {
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        &:checked + .checkbox__text:before {
+            content: "\e90a";
+            font-family: "icons";
+            font-size: 19px;
+            text-align: center;
+            color: #fff;
+            background-color: $blackColor;
+            @media (max-width: 2200px) {
+                font-size: 16px;
+            }
+            @media (max-width: $md1+px) {
+                font-size: 6px;
+            }
+        }
+    }
+
+    &__label {
+        display: inline-flex;
+
+        font-size: 24px;
+        line-height: 36 / 24 * 100%;
+        color: $blackColor;
+        cursor: pointer;
+        @include adaptiv-font(24, 11, 24);
+        &::before {
+            content: "";
+            // display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex: 0 0 32px;
+            height: 32px;
+            border: 1px solid $blackColor;
+            margin: 8px 20px 0px 0px;
+            @media (max-width: 2200px) {
+                flex: 0 0 24px;
+                height: 24px;
+            }
+            @media (max-width: $md1+px) {
+                margin: auto 10px auto 0;
+                flex: 0 0 14px;
+                height: 14px;
+            }
+            &:focus {
+                background-color: $blackColor;
+            }
+        }
+    }
+}
+
 //====================================================================================================
